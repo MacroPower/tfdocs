@@ -2336,7 +2336,7 @@ Use this data source to access information about an existing Application Insight
 				},
 				resource.Attribute{
 					Name:        "id",
-					Description: `The ID of the Virtual Machine.`,
+					Description: `The ID of the Application Insights component.`,
 				},
 				resource.Attribute{
 					Name:        "app_id",
@@ -2374,7 +2374,7 @@ Use this data source to access information about an existing Application Insight
 			Attributes: []resource.Attribute{
 				resource.Attribute{
 					Name:        "id",
-					Description: `The ID of the Virtual Machine.`,
+					Description: `The ID of the Application Insights component.`,
 				},
 				resource.Attribute{
 					Name:        "app_id",
@@ -4854,6 +4854,7 @@ Use this data source to access information about an existing Database Migration 
 Use this data source to access information about an existing Databricks workspace.
 
 `,
+			Icon: "Analytics/10787-icon-service-Azure-Databricks.svg",
 			Keywords: []string{
 				"databricks",
 				"workspace",
@@ -6595,6 +6596,10 @@ Use this data source to access information about a Function App.
 					Description: `A ` + "`" + `site_credential` + "`" + ` block as defined below, which contains the site-level credentials used to publish to this App Service.`,
 				},
 				resource.Attribute{
+					Name:        "client_cert_mode",
+					Description: `The mode of the Function App's client certificates requirement for incoming requests.`,
+				},
+				resource.Attribute{
 					Name:        "os_type",
 					Description: `A string indicating the Operating System type for this function app. ~>`,
 				},
@@ -6803,6 +6808,10 @@ Use this data source to access information about a Function App.
 				resource.Attribute{
 					Name:        "site_credential",
 					Description: `A ` + "`" + `site_credential` + "`" + ` block as defined below, which contains the site-level credentials used to publish to this App Service.`,
+				},
+				resource.Attribute{
+					Name:        "client_cert_mode",
+					Description: `The mode of the Function App's client certificates requirement for incoming requests.`,
 				},
 				resource.Attribute{
 					Name:        "os_type",
@@ -8011,6 +8020,7 @@ Use this data source to access information about an existing IP Group.
 Use this data source to access information about an existing Key Vault.
 
 `,
+			Icon: "Security/10245-icon-service-Key-Vaults.svg",
 			Keywords: []string{
 				"key",
 				"vault",
@@ -8190,6 +8200,7 @@ Use this data source to access information about an existing Key Vault.
 Use this data source to access information about the permissions from the Management Key Vault Templates.
 
 `,
+			Icon: "Internet_of_things-1/10192-icon-service-Time-Series-Insights-Access-Policies.svg",
 			Keywords: []string{
 				"key",
 				"vault",
@@ -13856,7 +13867,7 @@ Use this data source to access information about an existing Policy Set Definiti
 					Description: `The unique ID within this policy set definition for this policy definition reference.`,
 				},
 				resource.Attribute{
-					Name:        "group_names",
+					Name:        "policy_group_names",
 					Description: `The list of names of the policy definition groups that this policy definition reference belongs to. --- An ` + "`" + `policy_definition_group` + "`" + ` block exports the following:`,
 				},
 				resource.Attribute{
@@ -13934,7 +13945,7 @@ Use this data source to access information about an existing Policy Set Definiti
 					Description: `The unique ID within this policy set definition for this policy definition reference.`,
 				},
 				resource.Attribute{
-					Name:        "group_names",
+					Name:        "policy_group_names",
 					Description: `The list of names of the policy definition groups that this policy definition reference belongs to. --- An ` + "`" + `policy_definition_group` + "`" + ` block exports the following:`,
 				},
 				resource.Attribute{
@@ -19420,6 +19431,10 @@ Use this data source to access information about an existing User Assigned Ident
 					Description: `The Client ID of the User Assigned Identity.`,
 				},
 				resource.Attribute{
+					Name:        "tenant_id",
+					Description: `The Tenant ID of the User Assigned Identity.`,
+				},
+				resource.Attribute{
 					Name:        "tags",
 					Description: `A mapping of tags assigned to the User Assigned Identity. ## Timeouts The ` + "`" + `timeouts` + "`" + ` block allows you to specify [timeouts](https://www.terraform.io/docs/configuration/resources.html#timeouts) for certain actions:`,
 				},
@@ -19444,6 +19459,10 @@ Use this data source to access information about an existing User Assigned Ident
 				resource.Attribute{
 					Name:        "client_id",
 					Description: `The Client ID of the User Assigned Identity.`,
+				},
+				resource.Attribute{
+					Name:        "tenant_id",
+					Description: `The Tenant ID of the User Assigned Identity.`,
 				},
 				resource.Attribute{
 					Name:        "tags",
